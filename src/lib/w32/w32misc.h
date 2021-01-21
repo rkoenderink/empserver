@@ -51,13 +51,6 @@
 #define strncasecmp(s1, s2, s3) _strnicmp((s1), (s2), (s3))
 #endif /* _MSC_VER */
 
-/* errno.h */
-#ifdef _MSC_VER
-#ifndef EWOULDBLOCK
-#define EWOULDBLOCK EAGAIN
-#endif
-#endif
-
 /* fcntl.h */
 #ifdef _MSC_VER
 #define O_ACCMODE (_O_RDONLY|_O_WRONLY|_O_RDWR)
