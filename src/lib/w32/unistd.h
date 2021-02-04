@@ -46,7 +46,9 @@
  * here.  Major name space pollution, can't be helped.
  */
 #include <direct.h>
+#ifndef _MSC_VER
 #include <getopt.h>
+#endif
 #include <io.h>
 #include <process.h>
 #include <sys/stat.h>
