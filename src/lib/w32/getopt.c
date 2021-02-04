@@ -1,4 +1,8 @@
 #ifdef _MSC_VER
+#define __UNCONST(a) ((void *)(a))
+#define _DIAGASSERT(cond) assert((cond))
+#define getprogname() ((const char *)nargv[0])
+
 /*	$NetBSD: getopt.c,v 1.29 2014/06/05 22:00:22 christos Exp $	*/
 
 /*
@@ -30,10 +34,12 @@
  * SUCH DAMAGE.
  */
 
+#if 0
 #include <sys/cdefs.h>
 __RCSID("$NetBSD: getopt.c,v 1.29 2014/06/05 22:00:22 christos Exp $");
 
 #include "namespace.h"
+#endif
 
 #include <assert.h>
 #include <errno.h>
